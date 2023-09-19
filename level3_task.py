@@ -92,3 +92,63 @@ print(domain)
 13. Currency converter : create a python script that takes a money with currency sign and
 convert it to some other currencies , the code should be like the game we did before
 '''
+
+
+'''
+1-- def take the money and its type
+2-- def to convert money form a to b
+3-- print it in an initiatl constructor 
+inside a class 
+'''
+
+class money : 
+    def __init__(self,):
+        while True:
+
+            print('''
+            welcome to our bank
+                1--To convert from Dollar to EP
+                2--To convert from Euro to EP
+                3--To convert from yen to EP 
+                ''')
+            user_choice=int(input("Enter a Number : "))
+            if user_choice==1:
+                Dollar=int(input("How many Dollar=$ you want to convert : "))
+                self.Dollar_to_Ep(Dollar)
+                
+            elif user_choice==2:
+                Euro=float(input("How many Euro=€ you want to convert : "))
+                self.Euro_to_EP(Euro)
+                
+            elif user_choice==3:
+                Yen=float(input("How many Yen=¥ you want to convert : "))
+                self.Yen_to_EP(Yen)
+
+            else:
+                print("Exit")
+                break
+            
+            play_again=input("""
+                Do you want To play again : 
+                press any key to continue : 
+                press n to Exit : 
+                ===========================             
+                             """)
+            if play_again=='n':
+                print("Good Bye")
+                break
+
+    def Dollar_to_Ep(self,Dollar,):
+            y=Dollar * 30.9
+            print("you Have : ",y,"£")
+            
+    def Euro_to_EP(self,Euro,):
+            y=Euro*33
+            print("you Have : ",y,"£")
+
+    def Yen_to_EP(self,Yen,):
+            y=Yen*.2
+            print("you Have : ",y,"£")
+             
+       
+m=money()
